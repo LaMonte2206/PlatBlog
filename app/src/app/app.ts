@@ -1,5 +1,7 @@
 import {App, events, register, routing, web} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
+import NewPostViewControl from '../viewcontrols/newpost/newpost.vc';
+import SinglePostViewControl from '../viewcontrols/singlepost/singlepost.vc';
 
 export default class MyApp extends App {
     constructor(router: routing.Router, config: web.IBrowserConfig) {
@@ -9,7 +11,9 @@ export default class MyApp extends App {
 
         //The apttern is the part AFTER the slash
         router.configure([
-            { pattern: '', view: HomeViewControl }
+            { pattern: '', view: HomeViewControl },
+            { pattern: 'compose', view: NewPostViewControl },
+            { pattern: 'posts/:someid', view: SinglePostViewControl }
         ]);
     }
 
