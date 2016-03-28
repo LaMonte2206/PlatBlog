@@ -22,4 +22,4 @@ export default class PostRepository extends BaseRepository {
 
 }
 
-register.injectable('post-repo', PostRepository[PostService]);
+register.injectable('post-repo', PostRepository,[PostService]);

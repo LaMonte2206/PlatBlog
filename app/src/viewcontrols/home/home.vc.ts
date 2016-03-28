@@ -41,4 +41,4 @@ export default class HomeViewControl extends BaseViewControl {
     }
 }
 
-register.viewControl('home-vc', HomeViewControl, [PostRepository]); /
+register.viewControl('home-vc', HomeViewControl, [PostRepository]); 
